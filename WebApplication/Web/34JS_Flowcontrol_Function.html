@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hello</title>
+</head>
+<body>
+
+
+    <script>
+        //函數(function)
+        //一段預先寫好的程式，會有特定的作用
+
+
+        //內建函數
+        //alert("test");           //跳出通知
+        //prompt("Type your name");
+        var r = Math.random();  //此函數的功用為回傳一個0~1之間的隨機值，包含0，但不包含1
+        document.write(r);
+
+        document.write("<hr>");
+
+
+        //自訂函數
+        
+        function switchNumbers(a, b) {  //先設定好函數，但未寫入數值，也還沒被呼叫
+            var x = a; y = b;
+            x = x + y;
+            y = x - y;
+            x = x - y;
+
+            document.write(`交換之後，第一個數為${x},第二個數為${y}`)
+        }
+        
+
+
+        //switchNumbers(100, 200);
+        //switchNumbers(153, 4821);
+
+        document.write("<hr>");  
+
+        //var a = parseInt(prompt("請輸入第一個數"));  //此區開始寫入數值，最後會回傳到上面寫好的函數
+        //var b = parseInt(prompt("請輸入第二個數"));
+        //document.write(`您輸入的第一個數為${a},第二個數為${b}`)
+        //switchNumbers(a, b);   //這段呼叫函數，所以會再回到上一段設定好的函數
+
+        /////////////////////////////
+
+        var intPayType = parseInt(prompt("1.信用卡付款 2.現金 3.轉帳 4.LinePay 5.貨到付款"));
+
+        var selectPayType = function (intPayType) {
+
+        switch (intPayType) {
+            case 1:
+                document.write("信用卡付款");
+                break;
+            case 2:
+                document.write("現金付款")
+                break;
+            case 3:
+                document.write("轉帳付款")
+                break;
+            case 4:
+                document.write("LinePay付款")
+                break;
+            case 5:
+                document.write("貨到付款")
+                break;
+            }
+        }
+        selectPayType(intPayType);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+
+    <script>
+        //巢狀迴圈：雙層結構的迴圈
+        for (var j = 0; j < 5; j++) {    //控制一行
+
+            for (var i = 0; i <= j; i++) {    //控制一列，原設定i<5，一列會出現5顆，i<=j控制顆數，變成一列會跟隨j迴圈的數字出現*數
+                document.write("*");
+            }
+            document.write("<br>")
+        }
+
+        document.write("<hr>")
+
+        //////////////////////////
+        //只使用一個迴圈達到上面的效果
+        var a = "";    //宣告字串為變數
+        for (var i = 1; i <= 5; i++) {
+            a+="*";    //a=a+"*"  意即每一圈要多加一個*
+            document.write(a+"<br>");
+        }
+
+        document.write("<hr>")
+        //////////////////////////
+        //九九乘法表
+        for (y = 1; y <= 9; y++) {
+            for (var x = 1; x <= 9; x++) {
+            document.write(y+ "*" +x+ "=" +y*x);
+                document.write("<br>")
+            }
+            document.write("<br>")
+        }
+        
+    </script>
+</body>
+</html>

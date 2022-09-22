@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #body {
+            background-color:#FDF6EC;
+        }
+
+        #container {
+            width: 1000px;
+            margin: auto;
+            display:flex;
+        }
+
+        #title {
+            box-shadow: 0px 0px 10px #826F66;
+            border-radius: 10px;
+            text-align: center;
+            background-color: #E3B7A0;
+            width: 1000px;
+            margin:auto;
+        }
+
+        .main {
+            flex-wrap:wrap;
+            justify-content:space-between;
+            
+         
+            }
+
+        #container > div {
+            box-shadow: 0px 0px 10px #826F66;
+            border-radius: 10px;
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #E3B7A0;
+            width:300px;
+        }
+
+        .map {
+            background-color: #A64B2A;
+           margin:auto;
+            width:200px;
+            
+        }
+
+        a:link {
+            text-decoration: none;
+            color: wheat;
+        }
+
+        a:active {
+            background-color: black;
+        }
+
+        a:visited {
+            color: #FFFBE7;
+        }
+
+        .intro {
+            width: 280px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            text-align: center;
+        }
+
+
+
+        .center {
+        text-align:center;
+        }
+
+    </style>
+
+</head>
+<body id="body">
+    <h1 id="title">全國農業旅遊休閒園區</h1>
+    <div id="container" class="main"> 
+        
+
+    </div>
+
+    <script src="Scripts/jquery-3.6.0.min.js"></script>
+    <script>
+
+        var item = "";
+
+
+            $.ajax({
+                type: 'get',
+                url: 'https://data.coa.gov.tw/Service/OpenData/ODwsv/ODwsvAttractions.aspx',
+                success: function (data) {
+                    console.log(data);
+
+                    for (i = 0; i < data.length; i++) {
+                        item = `
+                             <div class="center"><img src="${data[i].Photo}"  width="280"/>
+                            <div class="intro">${data[i].Introduction}</div>
+                                <h2 class="center">${data[i].Name}</h2>
+                                <h3 class="center">
+                                ${data[i].City} ${data[i].Town}
+                                </h3>
+                                <div class="center">
+                                <span>電話：${data[i].Tel}</span>
+                                <p>地址：${data[i].Address}</p>
+                                <div class="map"><a href="https://www.google.com.tw/maps/search/${data[i].Address}" target="_blank">點我看地圖</a>
+                                </div>
+                               
+                            </div>`
+
+                     
+                         $(`#container`).append(item);
+                    }
+                },
+
+                error: function () {
+                    alert('error');
+                }
+
+
+            });
+
+        
+    </script>
+
+</body>
+</html>

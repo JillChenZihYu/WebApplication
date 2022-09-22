@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #container{
+            width:900px;
+            margin:auto;
+        }
+
+        /*    #container > h1:first-child {
+                border: 2px groove steelblue;
+                border-radius: 10px;
+                padding: 15px;
+                text-align: center;
+            }*/
+
+        #container>div {
+            border:2px groove steelblue;
+            border-radius:10px;
+            margin-top:10px;
+            padding:15px;
+        }
+
+        #container>div>img{
+            width:inherit;
+
+        }
+
+        .center{
+            text-align:center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>全國農業旅遊休閒園區</h1>
+    </div>
+
+
+
+    <script src="Scripts/jquery-3.6.0.min.js"></script>
+    <script>
+        //var h1 = document.createElement("h1");
+        //h1.innerText = "歡迎光臨";
+        //var c = document.getElementById("container");
+        /*c.appendChild(h1);*/
+
+        //$('#container').html("<h1>歡迎光臨</h1>");
+
+        var item = "";
+        $.ajax({//ajax非同步存取技術
+            type: 'get',   /*取資料*/
+            url: 'https://data.coa.gov.tw/Service/OpenData/ODwsv/ODwsvAttractions.aspx',
+            success: function (data) {  /*成功的話執行此動作，data是url成功執行後的結果*/
+                console.log(data);
+
+                for (i = 0; i < data.length; i++) {
+                    //item = "<div>";
+                    //item += "<h2>" + data[i].Name + "</h2>";
+                    //item += "<h4>" + data[i].Tel + "</h4>";
+                    //item += "<h4>" + data[i].Address + "</h4>";
+                    //item += "<img src='" + data[i].Photo + "' />";
+
+                    //item += `<p> <a href="https://www.google.com.tw/maps/search/${data[i].Address}" target="_blank">我要看地圖</a></p>`;
+
+                    //item += "</div>";
+                    //item += "<hr>";
+
+                    item = ` <div title="${data[i].Introduction}">
+                                 <h2 class="center"> ${data[i].Name}</h2>
+                                 <div class="center"><img src="${data[i].Photo}"/>
+                                 <h4>${data[i].City} ${data[i].Town}</h4>
+                                 <h4> ${data[i].Tel} | ${data[i].Address} |  <a href="https://www.google.com.tw/maps/search/${data[i].Address}" target="_blank">我要看地圖</a></h4></div>
+
+                   </div>`;
+
+
+
+
+                    $('#container').append(item); //append:把item加到container裡，append是一次增加一筆資料，所以第一筆只要寫=就好，等同於空出一個空間寫入接下來的資料，完成後迴圈繼續進行。
+                    //$('#container').html(item); 如果在迴圈內寫html會逐次增加一筆資料，到最後一次的時候，會寫入第一筆到最後一筆資料，並覆蓋前面原有的資料，效能會較差，所以會寫在迴圈外，且迴圈內需寫+=。
+
+                }
+
+            },
+            error: function () {   /*失敗的話執行此動作*/
+                alert('error');
+            }
+        });
+
+      
+        function setStyle1() {
+        $('#container>h1:first-child').css({
+            'box-shadow': '0px 0px 5px steelblue',
+            'padding': '15px',
+            'text-align': 'center',
+            'background-color': 'lightsteelblue',
+            'color': 'white'
+        });
+            setTimeout("setStyle2()", 500)
+        }
+
+        function setStyle2() {
+            $('#container>h1:first-child').css({
+                'box-shadow': '0px 0px 5px red',
+                'padding': '15px',
+                'text-align': 'center',
+                'background-color': 'lightsalmon',
+                
+            });
+            setTimeout("setStyle1()", 500)
+        }
+
+        setStyle1();
+
+  
+
+    </script>
+
+</body>
+</html>

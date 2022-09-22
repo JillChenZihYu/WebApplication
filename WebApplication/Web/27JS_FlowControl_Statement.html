@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+
+    <script>
+        //流程控制  if...else
+        var a = 20;
+        //滿足條件就執行，不滿足條件就不執行〈if敘述〉
+        if (a > 10) {
+            document.write(a);
+        }
+
+        document.write("<hr>")
+        //////////////////////
+        //二擇一條件〈if...else...敘述〉
+        if (a > 10) {
+            document.write(a);
+        }
+
+        else {
+            document.write("a沒有大於10");
+        }
+
+        document.write("<hr>")
+        //////////////////////
+        //1.信用卡付款 2.現金 3.轉帳 4.LinePay 5.貨到付款
+
+        
+        var intPayType = 3
+        if (intPayType === 1) {
+            document.write("本次使用信用卡付款");
+        }
+
+        else if (intPayType === 2) {
+            document.write("本次使用現金付款");
+        }
+
+        else if (intPayType === 3) {
+            document.write("本次使用轉帳付款");
+        }
+
+        else if (intPayType === 4) {
+            document.write("本次使用LinePay付款");
+        }
+
+        else {
+            document.write("本次使用貨到付款");
+        }
+
+        document.write("<hr>")
+        /////////////////////////////////////
+        //判斷資料型別是否相同
+        var t = 1, r = "2";
+
+        if (t == r) {   //若兩者資料型別不相同，務必使用三個=
+            document.write("成立");
+        }
+        else {
+            document.write("不成立");
+        }
+
+        document.write("<hr>")
+
+        /////////////////////////////////////
+        //區分等第
+        //90以上優等，80~89分為甲等，70~79分為乙等
+        //60~69分為丙等，60以下為丁等
+        //邏輯運算  !:not   &&:and  ||:or
+        var score = 98;
+
+        if (score >= 90) {
+            document.write("優等");
+        }
+
+        else if (score >= 80) {
+            document.write("甲等");
+        }
+
+        else if (score >= 70) {
+            document.write("乙等");
+        }
+
+        else if (score >= 60) {
+            document.write("丙等");
+        }
+
+        else {
+            document.write("丁等");
+        }
+        
+
+
+    </script>
+</body>
+</html>

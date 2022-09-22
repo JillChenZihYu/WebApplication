@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <h1 style="text-decoration:underline">Welcome my homepage</h1>    <!--底線-->
+    <h1 style="text-decoration:overline">Welcome my homepage</h1>     <!--上線-->
+    <h1 style="text-decoration:line-through">Welcome my homepage</h1> <!--中間線-->
+    <h1 style="text-decoration:none">Welcome my homepage</h1>         <!--用於原有預設裝飾但卻想取消裝飾時。-->
+    <a href="#" style="text-decoration:none">Click</a>                <!--加入none之後會消除底線-->
+    <h1 style="color: steelblue; background-color:blanchedalmond; font-size:38pt">Welcome my homepage</h1>
+    <h1 style="text-align: center">Welcome my homepage</h1>
+    <h1 style="text-align: right">Welcome my homepage</h1>
+    <hr />
+    <h1 style="text-transform:uppercase">Welcome my homepage</h1>  <!--全部小寫-->
+    <h1 style="text-transform:lowercase">Welcome my homepage</h1>  <!--全部大寫-->
+    <h1 style="text-transform:capitalize">Welcome my homepage</h1> <!--每一個單字開頭都大寫-->
+    <hr />
+    <h1 style="text-shadow: 0px -10px 5px red, -5px -5px 10px gray">Welcome my homepage</h1>  <!--第一個數值為X軸，正數往右，負數往左；第二個數值為y軸，正數往下，負數往上，第三個數值為暈染程度，可做不只一個陰影-->
+    <hr />
+
+    <input id="btn1" type="button" value="大" />
+    <input id="btn2" type="button" value="中" />
+    <input id="btn3" type="button" value="小" />
+
+    <div id="news" style="text-indent: 2em">
+        今天(11號)大環境偏東南風，清晨除了迎風面的東半部降雨較明顯外，南方水氣也偏多，西半部地區也出現零星飄雨，不過到了白天各地將轉為多雲到晴，穩定的天氣，氣溫上，今天高溫預測將比昨天還略高一些，各地都有機會飆破30°C，而輕颱「馬勒卡」今天將有機會增強為中颱，與輕颱「梅姬」對台灣都無直接影響。
+    </div>
+
+    <script>
+        btn1 = document.getElementById("btn1");
+        btn2 = document.getElementById("btn2");
+        btn3 = document.getElementById("btn3");
+        news = document.getElementById("news");
+
+        btn1.addEventListener('click', function(){
+            news.style.fontSize = "40pt";
+        })
+        btn2.addEventListener('click', function(){
+            news.style.fontSize = "20pt";
+        })
+        btn3.addEventListener('click', function(){
+            news.style.fontSize = "6pt";
+        })
+
+    </script>
+
+
+
+</body>
+</html>

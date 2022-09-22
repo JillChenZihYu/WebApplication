@@ -1,0 +1,62 @@
+﻿@model IEnumerable<_02View.Models.NightMarket>
+
+@{
+    ViewBag.Title = "夜市列表";
+}
+
+<h2>台南高雄各大夜市列表</h2>
+
+<p>
+    @*@HTML Helper*@ 
+    @Html.ActionLink("新增資料", "Create")
+    @*等同於<a herf="/Home/Create">Create New</a>*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            編號
+        </th>
+        <th>
+            夜市名稱
+        </th>
+        <th>
+            夜市地址
+        </th>
+        <th>
+            照片
+        </th>
+        <th>
+            地圖
+        </th>
+        <th>
+            資料管理
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @item.Id
+    </td>
+
+    <td>
+        @item.Name
+    </td>
+    <td>
+        @item.Address
+    </td>
+    <td>
+        <img src="~/images/@(item.Id).jpg" width="150" />
+    </td>
+    <td>
+        <a href="https://www.google.com.tw/maps/search/@item.Address" target="_blank">我要看地圖</a>
+    </td>
+    <td>
+        @Html.ActionLink("編輯", "Edit", new { id = item.Id }) |
+        @Html.ActionLink("詳細資料", "Details", new { id = item.Id }) |
+        @Html.ActionLink("刪除", "Delete", new { id = item.Id })
+    </td>
+</tr>
+}
+
+</table>

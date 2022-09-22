@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+</head>
+<body>
+    
+    <table border="1" width="400">
+        <caption>成績單</caption>  <!--表格標題用，一定要放在table內才有效，會自動置中於表格-->
+
+        <tr>
+            <td>張三</td>
+            <td>89</td>
+            <td>94</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>65</td>
+            <td>44</td>
+        </tr>
+        <tr>
+            <td>王五</td>
+            <td>58</td>
+            <td>12</td>
+        </tr>
+
+        <thead>  <!--thead無論寫在哪裡都會放在表頭，且table內的其他項目會被默認為tbody-->
+            <tr>
+                <th>姓名</th>    <!--th適用於項目，輸入後會自動置中加粗體-->
+                <th>國文</th>
+                <th>數學</th>
+            </tr>
+        </thead>
+
+        <tfoot>  <!--表尾-->
+            <tr>
+                <td colspan="3">   <!--需額外設定colspan，不然只會佔一格-->
+                    製表人：大熊
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr />
+    <table border="1" width="300" height="300">
+        <tr>              <!--tr為列-->
+            <td></td>  <!--td為格-->
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <table border="1" width="400" height="700">
+        <tr>
+            <td></td>
+            <td colspan="3"></td>  <!--欄合併-->
+           
+        </tr>
+        <tr>
+            <td rowspan="2"></td>  <!--列合併-->
+            <td></td>
+            <td colspan="2"></td>
+           
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <td></td>
+            <td></td>
+           
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2"></td>
+           
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <td></td>
+            <td colspan="2" rowspan="2"></td>
+        </tr>
+        <tr>
+            <td></td>
+           
+        </tr>
+    </table>
+
+    <hr />
+    <table border="1" width="500" height="700">
+        <tr>
+            <td></td>
+            <td colspan="2"></td>
+            <td rowspan="2"></td>
+            <td rowspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2"></td>
+            <td></td>
+            
+            
+        </tr>
+        <tr>
+            
+            <td colspan="2"></td>
+            
+        </tr>
+    </table>
+</body>
+</html>

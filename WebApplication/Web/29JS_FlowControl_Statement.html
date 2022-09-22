@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+
+    <script>
+        //迴圈(loop)敘述
+        //for敘述
+        //用在知道要執行幾次
+        //for (起始值; 結束值; 增量值)
+
+        for (i = 1; i <= 10; i++) {
+            document.write("Hello World!!");
+
+            console.log(i); //可在網頁上用F12看console，得以查詢語法是否有誤
+        }
+
+
+        document.write("<hr>")
+
+
+        for (i = 1; i <= 6; i++) {
+            document.write("<h" + i + ">Hello World!!</h" + i + ">"); //想要使用h1~h6，可以直接在<h1></h1>裡加上"+i+"〈i為上層宣告的迴圈，所以會從1算到6，需用兩個+號夾在裡面〉
+
+            console.log(i);
+        }
+
+        document.write("<hr>")
+        ////////////////////
+
+        for (j = 1; j <= 100; j++) {  //要執行h1~h6的Hello World〈此為一組〉，共100次，所以共會有600行
+
+        for (i = 1; i <= 6; i++) {
+            document.write("<h" + i + ">Hello World!!</h" + i + ">"); 
+
+            console.log(i);
+            }
+        }
+
+        document.write("<hr>")
+        
+    </script>
+</body>
+</html>

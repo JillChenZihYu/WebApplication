@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>RWD Homework</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/MyStyle.css" rel="stylesheet" />
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container">
+            <a class="navbar-brand" href="#">使你破產的貓</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">主頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">更多照片</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-target="#PricingDropdown">
+                            捐款金額
+                        </a>
+                        <div class="dropdown-menu" id="PricingDropdown">
+                            <a class="dropdown-item" href="#">NT$200</a>
+                            <a class="dropdown-item" href="#">NT$500</a>
+                            <a class="dropdown-item" href="#">NT$1000</a>
+                            <a class="dropdown-item" href="#">NT$2000</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">代言好物</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" action="https://www.google.com/search">
+                    <input id="Text1" type="text" name="q" placeholder="Search..." class="form-control mr-sm-2" />
+                    <input id="Submit1" type="submit" value="Search" class="btn btn-light my-2 my-sm-0" />
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="modal fade" id="loginModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title bg-light" id="exampleModalLabel">Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="email" class="bg-light">E-mail:</label>
+                            <input id="email" name="email" type="text" class="form-control" placeholder="Enter Your E-mail..." />
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd" class="bg-light">Password:</label>
+                            <input id="pwd" name="pwd" type="password" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="text-right">
+            <button class="btn btn-link" data-toggle="modal" data-target="#loginModal">登入成為供養我的一員</button> | <button class="btn btn-link">捐罐罐給我</button>
+        </div>
+        <div class="jumbotron text-white">
+            <h1 class="display-4 text-shadow "><strong>多毛寫真</strong></h1>
+            <h3 class="text-shadow">可愛美喵(^˵◕ω◕˵^)</h3>
+            <hr>
+            <h5 class="bg-light text-dark p-2 rounded">想看更多不同角度的我，請點擊下方捐款專戶付費解鎖！〈奴才：好想靠貓咪斂財度日〉</h5>
+            <a class="btn btn-secondary" href="#">捐款專戶</a>
+        </div>
+        <div class="media">
+            <img src="Catpics/S__10764355.jpg" class="mr-3" width="180" />
+            <div class="media-body">
+                <h4 class="mt-0"><strong>招牌坐姿</strong></h4>
+                <p>只折一手是我的特色。</p>
+            </div>
+        </div>
+        <div class="media">
+
+            <div class="media-body">
+                <h4 class="mt-0 text-right"><strong>1歲證件照</strong></h4>
+                <p class="text-right">18歲準備來去考大學！</p>
+            </div>
+            <img src="Catpics/S__10764359.jpg" class="ml-3" width="180" />
+        </div>
+        <div class="media">
+            <img src="Catpics/S__10764353.jpg" class="mr-3" width="180" />
+            <div class="media-body">
+                <h4 class="mt-0"><strong>睡到舉手</strong></h4>
+                <p>夢到老師在叫我...zZ</p>
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-body">
+                <h4 class="mt-0 mb-1 text-right"><strong>加入調查兵團</strong></h4>
+                <p class="text-right">獻出我的心臟！（老師有看過進擊的巨人嗎？）</p>
+            </div>
+            <img src="Catpics/S__10764360.jpg" class="ml-3" width="180" />
+        </div>
+        <div class="media">
+            <img src="Catpics/S__10764361.jpg" class="mr-3" width="180" />
+            <div class="media-body">
+                <h4 class="mt-0"><strong>想當偉人</strong></h4>
+                <p>牛頓說：「如果說我看得比別人遠，那是因為我站在巨人的肩上。」踩在背上應該也可以吧？</p>
+            </div>
+        </div>
+        <div class="media">
+
+            <div class="media-body">
+                <h4 class="mt-0 text-right"><strong>睡姿管理失敗</strong></h4>
+                <p class="text-right">麻煩幫我找一下我走失的下巴。</p>
+            </div>
+            <img src="Catpics/S__10764357.jpg" class="ml-3" width="180" />
+        </div>
+        <div class="media">
+            <img src="Catpics/S__10764358.jpg" class="mr-3" width="180" />
+            <div class="media-body">
+                <h4 class="mt-0"><strong>兼差演多比</strong></h4>
+                <p>每次給一個家庭小精靈一隻襪子，就少一隻貓貓受害QQ</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-body">
+                <h4 class="mt-0 mb-1 text-right"><strong>肉球寫真</strong></h4>
+                <p class="text-right">肉球到底哪裡香？不就是撥完貓砂的味道嗎？</p>
+            </div>
+            <img src="Catpics/S__10764364.jpg" class="ml-3" width="180" />
+        </div>
+
+        <div id="carouselPhotos" class="carousel slide mt-4" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselPhotos" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselPhotos" data-slide-to="1"></li>
+                <li data-target="#carouselPhotos" data-slide-to="2"></li>
+                <li data-target="#carouselPhotos" data-slide-to="3"></li>
+                <li data-target="#carouselPhotos" data-slide-to="4"></li>
+                <li data-target="#carouselPhotos" data-slide-to="5"></li>
+                <li data-target="#carouselPhotos" data-slide-to="6"></li>
+                <li data-target="#carouselPhotos" data-slide-to="7"></li>
+
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Catpics/S__10764363.jpg" class="d-block w-100" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>棉被裡的我</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Catpics/S__10764355.jpg" class="d-block w-100" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>招牌坐姿</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Catpics/S__10764356.jpg" class="d-block w-100" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>日常陪睡</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Catpics/S__10764362.jpg" class="d-block w-100" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>一盆貓貓</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Catpics/S__10764364.jpg" class="d-block w-100" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>肉球寫真</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Catpics/S__10764367.jpg" class="d-block w-100" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>老大坐姿</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Catpics/S__10764368.jpg" class="d-block w-100" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>手一定要扶著牆</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Catpics/S__10764353.jpg" class="d-block w-100" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>睡到舉手</h5>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-next" type="button" data-target="#carouselPhotos" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="sr-only">Next</span>
+            </button>
+            <button class="carousel-control-prev" type="button" data-target="#carouselPhotos" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="sr-only">Previous</span>
+            </button>
+        </div>
+
+    </div>
+
+
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script>
+        $('.carousel').carousel({
+            interval: 2000
+        })
+    </script>
+</body>
+</html>

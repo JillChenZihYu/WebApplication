@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .myStyle:hover{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+
+
+    <script>
+        //迴圈(loop)敘述
+        //while
+        //用在不知道要執行幾次
+        //while( 條件 )
+        //while可用的範圍比for大
+
+        //for (var i = 0; i <= 10; i++) {
+        //    document.write("<h1>Hello World!</h1>");
+        //    console.log(i);
+        //}
+
+
+        var i = 0;
+        while (i<=10) {
+
+            document.write("<h1>Hello World!</h1>");
+            console.log(i);
+            i++;   //{}內的條件需要與()內的條件有關，才不會形成無窮迴圈
+        }
+        document.write("<hr>")
+        /////////////////////
+        //for (i = 1; i <= 6; i++) {
+        //    document.write("<h" + i + ">Hello World!!</h" + i + ">"); //想要使用h1~h6，可以直接在<h1></h1>裡加上"+i+"〈i為上層宣告的迴圈，所以會從1算到6，需用兩個+號夾在裡面〉
+        //    console.log(i);
+        //}
+
+
+
+        var j = 0;
+        while (j <= 6) {
+
+            document.write(`<h${j} class="myStyle">Yeah</h${j}>`);
+            j++;   
+        }
+
+        document.write("<hr>")
+        /////////////////////
+        //計算1加到100的總和
+        var sum = 0;
+        var a = 1;
+        while (a <= 100) {
+            sum += a;
+            a++;
+        }
+
+        document.write(sum);
+
+        document.write("<hr>")
+        //畫星星
+        var b = "";
+        var c = 1;
+        while (c <= 5) {
+            b += "*";
+            document.write(`${b}<br>`)
+            c++
+        }
+
+        document.write("<hr>")
+        //雞兔同籠
+        var x = 0;
+        while (2 * x + 4 * (35 - x) != 94) {  //!=意即不等於94就繼續執行迴圈，若已等於就不執行，即為答案
+            x++;
+        }
+        document.write(`雞有${x}隻, 兔子有${35 - x}隻<br>`);
+
+        document.write("<hr>")
+        //九九乘法表
+        var d = 1;
+        var e = 0;   //後面再做指定運算，這邊先var就好
+        while (d <= 9) {
+            e = 1;// 繞完1*1=1後，要開始繞2*1=2，所以e要回到1。
+            while (e <= 9) {
+                document.write(`${d}*${e}=${d * e}`);
+                e++;
+                document.write("<br>")
+            }
+            d++;
+            document.write("<br>")
+        }
+
+        document.write("<hr>")
+
+
+
+        //後側迴圈
+
+    </script>
+</body>
+</html>

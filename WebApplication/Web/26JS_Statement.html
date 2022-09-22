@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+        //運算敘述句
+        var a = 10;
+        a = 20; //指定運算，a=20
+        a = a + 10;  //算術指定運算，a=30(20+10)
+        a += 10;  //算術指定運算，a=40(30+10)
+        a -= 8;  //算術指定運算，a=32(40-8)
+        a *= 10;  //算術指定運算，a=320(32*10)
+        a /= 32;  //算術指定運算，a=10(320/32)
+
+        a++;  //等於 a=a+1或 a+=1  //算術指定運算，a=11
+        document.write(a);
+
+        document.write("<hr>");
+        //////////////////////////////////
+        //隨堂練習-兩數交換
+        //宣告變數x與y為任意數，並將兩數的值交換
+        var x = 123; var y = 456;
+
+        var z = x;
+        x = y;
+        y = z;
+        document.write("x=" + x + ",y=" + y)
+        //////////////////////////////////
+        document.write("<hr>");
+        //////////////////////////////////
+        //隨堂練習-兩數交換
+        //宣告變數x與y為任意數，並將兩數的值交換
+        var x = 3; var y = 5;
+
+        x = x + y;
+        y = x - y;
+        x = x - y;
+        document.write("x=" + x + ",y=" + y)
+        //////////////////////////////////
+        document.write("<hr>");
+
+        //觀察以下輸出值的變化
+        document.write(3.0);  //結果為3
+        document.write("<br>");
+        document.write(3.5);  //結果為3.5
+        document.write("<br>");
+
+        //parseInt()  //將值轉型為整數型態
+        document.write(parseInt(3.0));  //結果為3
+        document.write("<br>");
+        document.write(parseInt(3.5));  //結果為3
+        document.write("<br>");
+        document.write(parseInt("3.5"));  //即使用字串，結果還是3
+        document.write("<br>");
+
+        //typeof() 看出某個值的資料型態
+        document.write("<br>");
+        document.write(typeof (3.0));  //結果為number
+        document.write("<br>");
+        document.write(typeof (parseInt(3.5)));  //結果為number
+        document.write("<br>");
+        document.write(typeof ("3.5"));  //結果為string
+        document.write("<br>");
+        document.write(typeof (parseInt("3.5")));  //結果為number
+        document.write("<br>");
+
+
+        document.write("<br>");
+        document.write(parseInt("34586thehertyeryerg"));  //數字開頭的話會顯示前面的數字
+        document.write("<br>");
+        document.write(parseInt("thehertyeryerg")); //結果為NaN(Not a Number)
+        document.write("<br>");
+        document.write(parseInt("thehertyeryerg34589")); //結果為NaN(Not a Number)，只有數字開頭才會顯示數字
+        document.write("<br>");
+        document.write(parseInt("12e5"));  //僅顯示12，因為從e開始是字串，後面不顯示
+        document.write("<br>");
+        document.write(parseInt("55",8)); //將8進位的55轉成10進位，結果為45
+        document.write("<br>");
+        document.write(parseFloat(5)); //將內容轉為浮點數
+        document.write("<br>");
+        document.write(typeof(parseFloat(5)));  //檢查上面的資料型別
+        document.write("<br>");
+        ////////////////////////
+        //使用不同資料型別來做運算
+        document.write("<hr>");
+
+        var strName = "Jack", intName = 123, blnGenger = true;
+        var result = "";  //初始化result變數為空字串
+
+        result = strName + blnGenger;  //string+boolean =>string
+        document.write("<br>");
+        document.write(result);
+
+        document.write("<br>");
+        result = strName + intName;  //string+number =>string
+        document.write("<br>");
+        document.write(result);
+
+        document.write("<br>");
+        result = blnGenger + intName;  //boolean〈true轉數字結果為1；false轉數字結果為0〉+number =>number
+        document.write("<br>");
+        document.write(result);
+
+        //不同資料型別運算都會遷就string，單純是因為另外兩個值能夠轉換成string。字串>數字>布林值
+        //變數還有全域性和區域性的問題
+    </script>
+</body>
+</html>

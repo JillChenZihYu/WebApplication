@@ -1,0 +1,41 @@
+﻿body {
+}
+
+caption {
+    color: steelblue;
+    text-align: center;
+    font-size: 1.5rem;
+    caption-side: top;
+}
+
+
+.table-hover tbody tr:hover {
+    color: cornflowerblue;
+    font-size: 1.3rem;
+    background-color: lightsalmon;
+}
+
+.MyTable {
+    overflow: auto;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: salmon;
+    content: ">";
+}
+
+.jumbotron {
+    background-repeat: round;
+    background-color: #E0CCCC;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 3px black;
+}
+
+
+.modal-content {
+   
+    background-image: url('../Catpics/S__10764356.jpg');
+    background-repeat: round;
+}

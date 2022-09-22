@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <input />  <!--文字輸入方塊-->
+    <input type="button" value="click" />  <!--點擊鍵-->
+    <input type="checkbox" /> <span>勾選</span>  <!--勾選鍵-->
+    <input type="radio" name="gender" /><span>女</span>   <input type="radio" name="gender" /><span>男</span>
+    <!--選項鍵，通常做為單選使用-->
+    <!--要設立一樣的name才有辦法單選，不然兩個都點就都沒辦法取消-->
+    <input type="text" /> <!--也是一種文字輸入方塊-->
+    <input type="password" /> <!--輸入密碼用，輸入完會變成**-->
+
+    <select>
+        <!--下拉式選單-->
+        <option>AAA</option>
+        <option>BBB</option>
+        <option>CCC</option>
+        <option>DDD</option>
+        <option>EEE</option>
+    </select>
+
+    <hr />
+
+    <select multiple>
+        <!--類似下拉式選單-->
+        <option>AAA</option>
+        <option>BBB</option>
+        <option>CCC</option>
+        <option>DDD</option>
+        <option>EEE</option>
+    </select>
+
+    <textarea rows="10" cols="30"></textarea> <!--文字輸入方塊-->
+
+    <hr />
+
+    <input type="color" />  <!--色彩選項-->
+
+
+    <input type="datetime-local" />  <!--日期-->
+
+    <input type="range" />  <!--通常用於音量大小的調整-->
+
+    <input type="number" /> <!--點擊增加或減少數字-->
+
+    <hr />
+    <input type="button" value="確認送出" onclick="alert('test')"/> <!--觸發前端程式，onclick設定點擊通知-->
+   
+    <input type="reset" value="重設" />  <!--恢復表單預設值的狀態，並非清空表單-->
+    
+    <input type="submit" value="送出" />
+</body>
+</html>

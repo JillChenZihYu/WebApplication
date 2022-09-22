@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        /*div{
+            border:1px solid;
+            因為有border line，格式會跑掉，所以暫時註解，用background-color表示區塊
+        }*/
+
+        #container {
+            width: 1200px;
+            margin: auto;
+        }
+
+        header {
+            height: 150px;
+            background-color: rosybrown;
+        }
+
+        nav {
+            height: 700px;
+            width: 300px;
+            float: left;
+            background-color: darksalmon;
+        }
+
+        article {
+            height: 700px;
+            width: 900px;
+            float: right;
+            background-color: steelblue
+        }
+
+        footer {
+            height: 100px;
+            clear: both; /*移除float對bottom的影響,因為上面left跟right都有，所以這邊選both*/
+            background-color: dimgrey;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>Top</header>
+        <nav>Left</nav>
+        <article>Right</article>
+        <footer>Bottom</footer>
+    </div>
+</body>
+</html>

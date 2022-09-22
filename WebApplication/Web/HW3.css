@@ -1,0 +1,157 @@
+﻿
+@font-face {
+    font-family: 'webdings';
+    src: url('fonts/webdings.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'webdings';
+    src: url('fonts/webdings.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'webdings';
+    src: url('fonts/webdings.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'webdings';
+    src: url('fonts/webdings.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'webdings';
+    src: url('fonts/webdings.woff2') format('woff2');
+}
+
+
+#ControlPanel {
+    border: 3px solid gray;
+    width: 700px;
+    height: 480px;
+    margin: auto;
+    text-align: center;
+    background-color: #5F7161;
+    border-radius:5%;
+    padding:20px;
+}
+
+
+#song {
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    font-size: 15px;
+    background-color: #EFEAD8;
+    
+}
+
+
+
+#ControlPanel > span { /*意即ControlPanel內的span標籤*/
+    border: 2px solid gray;
+    padding: 5px;
+    box-shadow: 3px 3px 5px black;
+    cursor: pointer; /*滑鼠游標*/
+    background-color: #EFEAD8;
+    font-family: Webdings;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    border-radius: 50%;
+}
+
+#cross {
+    margin: 20px auto 20px auto;
+}
+
+#line2 {
+    margin: 20px auto;
+}
+
+#progress {
+    width: inherit;
+    height: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin-bottom: 10px;
+    background-color: #c8c8c8;
+    background-image: #D0C9C0;
+    outline: none;
+}
+
+    #progress::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 10px;
+        height: 5px;
+        background-color: #c8c8c8;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+        #progress::-webkit-slider-thumb:hover {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+
+
+#volValue {
+    width: 85%;
+    height: 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 2px solid gray;
+    background-color: #D0C9C0;  /*音量的鍵*/
+    outline: none;
+}
+
+    #volValue::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 25px;
+        height: 25px;
+        border: 2px solid gray;
+        background-color: #D0C9C0;
+        border-radius: 50%;
+    }
+
+
+    #volValue::-moz-slider-thumb {
+        -moz-appearance: none;
+        width: 35px;
+        height: 25px;
+        border: 2px solid gray;
+        background-color: #D0C9C0;
+    }
+
+    #Button1, #Button2 {
+        border-radius: 50%;
+        border:1px solid gray;
+        font-size:10px;
+    }
+
+#volinfo {
+    width:28px;
+}
+   
+
+#book > div {
+    border: 1px groove;
+    width: 348px;
+    height: 200px;
+    float: left;
+    background-color: #D0C9C0;
+}
+
+    #book > div > div {
+        border: 1px groove;
+    }
+
+#resetPlaylist {
+    width: 100%;
+   
+}
+
+.hide {
+    display: none;
+}

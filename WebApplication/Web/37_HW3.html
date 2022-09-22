@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>08陳姿妤</title>
+    <link href="HW3.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="ControlPanel">
+
+        <select id="song">
+            <!-- 下拉式卷軸 -->
+            
+        </select>
+
+        <hr id="cross"/>
+        <span onclick="Play()" id="btnPlay" title="這是播放鈕">4</span>    <!--onclick：點擊之後產生的效果-->
+        <span onclick="Stop()"><</span>
+        <span onclick="changeTime(-5)">7</span>
+        <span onclick="changeTime(5)">8</span>
+
+        <span onclick="changeSong(-1)">9</span>
+        <span onclick="changeSong(1)">:</span>
+        <span onclick="setMuted()">V</span>
+        <span onclick="setLoop()">q</span>
+        <span onclick="setRandom()">s</span>
+        <span onclick="setAllLoop()">`</span>
+        <span onclick="songBook()">@</span>
+
+        <hr id="line2"/>
+        <input id="progress" type="range" value="0" oninput="setTimeBar()" />
+        <input id="volValue" type="range" max="100" min="0" value="100" oninput="setVolume()" />
+        <!--range在左邊工具箱，拉範圍的bar;可寫max/min固定範圍大小;若寫入value="80"，則預設音量為80;
+    oninput為拖曳時輸入函數，拖曳時就會改變音量；若使用onchange，則會在拖曳完放掉左鍵後才輸入函數，拖曳完才會改變音量-->
+        <input id="Button1" type="button" value="-" onclick="changeVolume(-1)" />
+        <input id="Button2" type="button" value="+" onclick="changeVolume(1)" />
+        <input id="volinfo" type="text" readonly />  <!--readonly：不得手key值-->
+
+        <div id="info">
+            <marquee>請按下播放鍵</marquee> <!--跑馬燈-->
+            <div>00:00 / 00:00</div>
+            <div>　</div>
+        </div>
+        <div id="book" class="hide">
+            <div ondrop="drop(event)" ondragover="allowDrop(event)">
+                <!--因為要可以移動到右邊撥放清單，但又要可以移回左邊音樂庫，所以兩邊都需要下ondrop〈抓取中〉和ondragover〈抓到指定位置上〉兩個指令-->
+                <div title="music/Ruel%20-%20Painkiller.mp3">Ruel - Painkiller</div>
+                <div title="music/Oh%20Wonder%20-%20Without%20You.mp3">Oh Wonder - Without You</div>
+                <div title="music/Phum%20Viphurit%20-%20Lover%20Boy.mp3">Phum Viphurit - Lover Boy</div>
+                <div title="music/Jakubi%20-%20Couch%20Potato.mp3">Jakubi - Couch Potato</div>
+                <div title="music/HONNE%20-%20Day%201.mp3">HONNE - Day 1</div>
+                <div title="music/Jess%20Glynne%20-%20Aint%20Got%20Far%20To%20Go.mp3">Jess Glynne - Ain't Got Far To Go</div>
+            </div>
+            <div ondrop="drop(event)" ondragover="allowDrop(event)">
+                
+
+            </div>
+            <button id="resetPlaylist"onclick="updateMusic()">更新歌單</button>
+
+        </div>
+
+        <hr />
+
+    </div>
+
+
+
+
+    <audio id="music">
+        <source type="audio/mpeg" />
+    </audio>
+
+
+
+    <script src="HW3.js"></script>
+</body>
+</html>

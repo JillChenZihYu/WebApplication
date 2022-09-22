@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+
+    <script>
+        //變數
+        name = 123;
+        name = 456;
+
+        document.write(name); //若變數宣告多次，則會以最後一次為主
+
+        document.write("<hr>");
+        name = 789;   //第一種宣告變數的方式：直接宣告
+        var a = 123;  //第二種宣告變數的方式：var
+        let b = 123;  //第三種宣告變數的方式：let
+        var c; //宣告空箱，還沒決定要放什麼變數〈未賦值〉
+
+        var d;
+        document.write(d);  //結果會出現undefined，意即變數未賦值
+        //document.write(t);  若輸入未定義的變數，則不會顯示任何東西，但網頁上輸入F12後會在console裡出現t is not defined
+
+        let t = "45";  //上面已經宣告過a，所以這邊不會有新的賦值。會顯示Identifier 'a' has already been declared
+        document.write(t);
+        //若在此區將a的變數從數字改為字串，就可以顯示，但僅限在JavaScript可以這樣使用，在其他程式語言內都會報錯
+
+        document.write("<hr>")
+
+
+        ///////////////////////////
+        //數值〈number〉資料型態分類
+        
+        var n1 = 1.3;  //浮點數
+        var n2 = 1.5;  //浮點數
+        var r = n1 + n2
+
+        document.write(r);
+        document.write("<hr>")
+
+        //整數
+        n = 123;  //十進位整數
+        document.write(n);
+        document.write("<hr>");
+        n = 0123;  //八進位整數
+        document.write(n);
+        document.write("<hr>");
+        n = 0x123;  //十六進位整數
+        document.write(n);
+        document.write("<hr>");
+
+        n = 5e-10;  //浮點數
+        document.write(n);
+        document.write("<hr>");
+
+
+        //精準度遺失的例子，因為電腦運算是將十進位數換算成二進位數，再進行相加〈只會相加〉，最後會稍有誤差
+        var y = 0.1;
+        var x = 0.2;
+
+        document.write(y + x);
+    </script>
+</body>
+</html>
